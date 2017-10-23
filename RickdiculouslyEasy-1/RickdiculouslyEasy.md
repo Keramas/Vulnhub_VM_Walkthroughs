@@ -113,21 +113,7 @@ And we have a hit on a password! Time to SSH under RickSanchez using our newly f
 
 I am root! And we find the final flag (even though I forgot I couldn't use 'cat'...).
 
-Overall this was a pretty simple VM, but it was fun with the Rick and Morty theme!
+Here are all the flags found put together into one spot:
+<img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/RickdiculouslyEasy-1/walkthrough_images/allflags.png">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-To be continued...
-
-
+Overall this was a pretty simple VM, but it was fun with the Rick and Morty theme and it is a good example of enumeration and other helpful tools for hacking boxes.
