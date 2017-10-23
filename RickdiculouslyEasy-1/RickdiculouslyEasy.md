@@ -69,5 +69,65 @@ Pickle Rick! OK, SSH time. Port 22 led nowhere, but port 22222 is definitely run
 
 <img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/RickdiculouslyEasy-1/walkthrough_images/ssh_on_22222.png">
 
-Will write the rest up tomorrow!
+Taking a look at what files are available, there is a flag in her directory! 
+
+<img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/RickdiculouslyEasy-1/walkthrough_images/summerfiles.png">
+
+<img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/RickdiculouslyEasy-1/walkthrough_images/summer_flag.png">
+
+Backing out of her directory, we have a Morty directory and a RickSanchez directory. Morty seems like the easier target, so I scoped out what he had on tap. An image file and a zip file... Very suspect. I copied them to Summer's folder and then transferred them to my box with SCP for analysis.
+
+<img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/RickdiculouslyEasy-1/walkthrough_images/scptransfer.png">
+
+The zip was password protected, but using strings on the image there was a password hidden in the image file.
+
+<img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/RickdiculouslyEasy-1/walkthrough_images/safepassword_pic_analysus.png">
+
+Caaaaaan do! Using this password, the zip file opened right up. 
+
+<img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/RickdiculouslyEasy-1/walkthrough_images/journalFLAG.png">
+
+Morty, you shouldn't write down stuff like that in your journal! Looks like we have a bit of info we can tuck away for later. With Morty's folder exhausted of resources, I moved onto Rick's folder. Examining the files inside, it's the safe that was mentioned in Morty's journal. Looks like its an executable file as well, so I transferred it to check it out.
+
+<img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/RickdiculouslyEasy-1/walkthrough_images/ricksfolder_and_safe.png">
+
+Strangely I didn't have the library that was needed to run the program on my Kali VM, so I launched it with Ubuntu. Executing without any arguments gave me the hint that I needed to use an argument, so I tried the flag password that Morty revealed in his journal.
+
+<img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/RickdiculouslyEasy-1/walkthrough_images/safe_flag.png">
+
+A flag and a clue! We have quite a bit of information to play with to create a password. First things first, even though I am a fan of the show, I can't recall the band name, so time to Google it. 
+
+<img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/RickdiculouslyEasy-1/walkthrough_images/fleshcurtains.png">
+
+Pairing up all the information that we have on hand, it's crunch time! And by crunch, I mean it's time to use Crunch to generate a wordlist based on what we know. It's gotta be one of the two words (other than 'the'...), so I made two different wordlists that follow the hints given.
+
+<img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/RickdiculouslyEasy-1/walkthrough_images/crunchTIME.png">
+
+Now with my handy wordlists, I launched Hydra for SSH access with Rick's username. 
+
+<img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/RickdiculouslyEasy-1/walkthrough_images/hydraSuccess.png">
+
+And we have a hit on a password! Time to SSH under RickSanchez using our newly found password. Also, there was the hint about sudo, so I guessed that it was going to be easy to become root with this account.
+
+<img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/RickdiculouslyEasy-1/walkthrough_images/rootGET.png">
+
+I am root! And we find the final flag (even though I forgot I couldn't use 'cat'...).
+
+Overall this was a pretty simple VM, but it was fun with the Rick and Morty theme!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+To be continued...
+
 
