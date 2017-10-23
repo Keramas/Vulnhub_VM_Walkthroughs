@@ -1,3 +1,28 @@
+<b>VM Name:</b>
+RickdiculouslyEasy:1
+
+<b>Objective:</b>
+Get root and find all the flags (total of 130 points)
+
+It's been a bit since I checked Vulnhub for new VMs to mess with, and I was happy to find a bunch were added. One of which was a Rick and Morty-themed one, which I couldn't resist trying out.
+
+After loading up the VM in VirtualBox, step one was to find out the target's IP address with an arp-scan.
+
+<img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/RickdiculouslyEasy-1/walkthrough_images/arpscan.png">
+
+With the target IP, it's time to run nmap to determine open ports and services, and I decided to run it over all ports 1-65535 to see if anything interesting popped up.
+
+<img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/RickdiculouslyEasy-1/walkthrough_images/nmapresults.png">
+
+There are a bunch of ports to explore, and we can already see a flag, but we can check that port out later. 
+I started out with port 80 just in case there was information there I could use for the other ports. Accessing it through a browser, I was greeted by Morty.
+
+<img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/RickdiculouslyEasy-1/walkthrough_images/landingpage.png">
+
+There was nothing interesting in the source, so the next thing I check is /robots.txt.
+
+<img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/RickdiculouslyEasy-1/walkthrough_images/robotstxt.png">
+
 And, cool, there is some stuff here to check out. Naturally, I should have known that root_shell.cgi would be a troll, but I tried anyway with no good results other than Rick laughing at me. The tracertool.cgi on the otherhand...
 
 <img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/RickdiculouslyEasy-1/walkthrough_images/tracertool.png">
