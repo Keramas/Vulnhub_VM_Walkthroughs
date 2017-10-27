@@ -92,7 +92,7 @@ Amazing! We are in AND we are also root since it executed under root!
 
 Now, I know that we are alread root and our primary objective is done... but the box is challenging us with another way to get root, and I'm not one to turn down a challenge! Time to explore all the files and see if there is anything in here that is interesting.
 
-Checking out the home folder we find the Bulldogadmin user we knew existed from the /etc/passwd file. 
+First, let's change our shell interface by spawning a bash shell. Checking out the home folder we find the Bulldogadmin user we knew existed from the /etc/passwd file. 
 
 <img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/Bulldog1/walkthrough_images/hiddendirectory.png">
 
