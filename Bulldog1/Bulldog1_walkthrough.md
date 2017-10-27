@@ -107,8 +107,10 @@ Thanks Ashley! But unfortunately we can't run it. Perhaps, however, there is som
 
 <img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/Bulldog1/walkthrough_images/permissiondenied_strings.png">
 
+Winner, winner, chicken dinner! That looks like it could definitely be a password when put together (and it says it's a password!), unless we are getting super trolled. 
+
 'SUPERultimatePASSWORDyouCANTget'
 
-Winner, winner, chicken dinner! That looks like it could definitely be a password when put together (and it says it's a password!), unless we are getting super trolled. While I did not attempt to gain access through different means, I am certain that if the box can be accessed with a different user, we can use this password to gain root priviledges via 'sudo su'.
+While I did not attempt to gain access through different means, I am certain that if the box can be accessed with a different user, we can use this password to gain root priviledges via 'sudo su'.
 
 Seems like Bulldog Industries still has a ways to go before they are safe from breaches!
