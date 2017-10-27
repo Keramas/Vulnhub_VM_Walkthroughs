@@ -86,7 +86,7 @@ Remember, however, we can't use any semi-colons since they will be detected, so 
 
 Now we just wait a minute annnnnnnnnd...
 
-<img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/Bulldog1/walkthrough_images/rootshell.png">
+<img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/Bulldog1/walkthrough_images/congrats.png">
 
 Amazing! We are in AND we are also root since it executed under root! 
 
