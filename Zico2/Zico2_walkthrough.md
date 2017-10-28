@@ -23,10 +23,11 @@ Next, I booted up Dirb using a common wordlist, and tried to see if there were a
 The /dbadmin directory looks like it could be tasty.
 
 <img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/Zico2/images/dbadmin.png">
+<img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/Zico2/images/dbadminlogin.png">
 
 Nice--a login screen. Does 'admin' work for the password?
 
-<img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/Zico2/images/dbadminlogin.png">
+<img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/Zico2/images/adminloggedin.png">
 
 Lol... yep. Bad, bad, bad, Mr. Admin, sir. You should always change the default password! So we have a phpLiteAdmin v1.9.3 running on this system. Searching on Exploitdb, I found just what we needed, which fit this version perfectly:
 
