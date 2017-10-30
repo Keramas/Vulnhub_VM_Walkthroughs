@@ -120,7 +120,11 @@ Cool, now that that is all set, we arrive at a login prompt to which we put in t
 
 <img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/GameOfThronesCTF/images/got_winterfellcreds.png">
 
-Looking at the source to this page we are welcomed to Winterfell and get another kingdom flag! There is also another clue. So, downloading the shield and running strings on it, we get the following:
+Looking at the source to this page we are welcomed to Winterfell and get another kingdom flag! There is also another clue. 
+
+<img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/GameOfThronesCTF/images/got_winterfellflag.png">
+
+So, downloading the shield and running strings on it, we get the following:
 
 <img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/GameOfThronesCTF/images/got_starkshieldstrings.png">
 
