@@ -132,7 +132,7 @@ Nice, another hint! Before moving on, let's just check out the CSS file as well.
 
 <img src="https://github.com/Keramas/Vulnhub_VM_Walkthroughs/blob/master/GameOfThronesCTF/images/got_winterfellcss.png">
 
-Our next stop is the Iron Islands, which we know from our Nmap scan is port 53--meaning DNS, so combining this knowledge with the hints we've been given, it would seem we need to check out a TXT query for Timef0rconqu3rs, which we can do with the "hosts" command. I initially tried "dig", but it didn't return any descriptive text like hosts did (I'm sure there is a way though...).
+Our next stop is the Iron Islands, which we know from our Nmap scan is port 53--meaning DNS, so combining this knowledge with the hints we've been given, it would seem we need to check out a TXT query for Timef0rconqu3rs, which we can do with the "hosts" command. I initially tried "dig", but it didn't return any descriptive text like hosts did (I'm sure there is a way though...). (<i>Post edit: After consulting with my DNS guru friend, I was on the right track with what I was doing with Dig, but the command should have been "dig @192.168.1.118 Timef0rconqu3rs.7kingdoms.ctf TXT</i>)
 
 All we need to do is add the result of the domain onto what we got in the hint and our IP address and it comes back with descriptive text for the domain.
 
